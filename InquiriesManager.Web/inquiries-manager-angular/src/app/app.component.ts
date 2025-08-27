@@ -7,8 +7,6 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-// קומפוננטת השורש של האפליקציה
 export class AppComponent {
-  // משתנה כותרת האפליקציה
   title = 'inquiries-manager-angular';
 }

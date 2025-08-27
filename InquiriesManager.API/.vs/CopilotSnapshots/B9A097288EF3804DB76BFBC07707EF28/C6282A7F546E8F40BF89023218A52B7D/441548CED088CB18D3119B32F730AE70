@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 public class InquiriesRepositoryTests
 {
@@ -101,5 +102,16 @@ public class InquiriesRepositoryTests
 // Dummy context for testing
 public class TestDbContext : InquiriesDbContext
 {
-    public TestDbContext() : base(new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<InquiriesDbContext>().Options) { }
+    public TestDbContext() : base(new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<InquiriesDbContext>()
+        .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+        .Options) { }
+
+    protected override void OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder optionsBuilder)
+    {
+        // Ensure the in-memory provider is always used for tests
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString());
+        }
+    }
 }

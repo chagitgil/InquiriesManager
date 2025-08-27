@@ -1,5 +1,4 @@
--- Stored Procedure: MonthlyInquiriesReport
--- Returns: Department, CurrentMonthCount, PreviousMonthCount, LastYearSameMonthCount
+
 
 CREATE PROCEDURE MonthlyInquiriesReport
     @ReportYear INT,

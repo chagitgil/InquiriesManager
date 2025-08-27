@@ -23,14 +23,10 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './inquiry-form.component.html',
   styleUrl: './inquiry-form.component.scss'
 })
-// קומפוננטה לטופס פנייה
 export class InquiryFormComponent {
-  // טופס הפנייה
   inquiryForm: FormGroup;
-  // מערך המחלקות לבחירה בטופס
   departments = Object.entries(departments).map(([id, name]) => ({ id: Number(id), name }));
 
-  // בנאי הקומפוננטה, יוצר את הטופס
   constructor(private fb: FormBuilder, private inquiriesService: InquiriesService) {
     this.inquiryForm = this.fb.group({
       name: ['', Validators.required],
@@ -49,6 +45,11 @@ export class InquiryFormComponent {
         next: () => {
           alert('הפנייה נשלחה בהצלחה!');
           this.inquiryForm.reset();
+          this.inquiryForm.markAsPristine();
+          this.inquiryForm.markAsUntouched();
+          Object.keys(this.inquiryForm.controls).forEach(key => {
+            this.inquiryForm.get(key)?.setErrors(null);
+          });
         },
         error: () => {
           alert('אירעה שגיאה בשליחת הפנייה');
