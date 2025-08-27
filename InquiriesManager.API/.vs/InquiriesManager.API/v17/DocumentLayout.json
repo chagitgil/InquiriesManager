@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\models\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:models\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\storedprocedures\\monthlyinquiriesreport.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:storedprocedures\\monthlyinquiriesreport.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
@@ -27,12 +15,28 @@
       "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:data\\inquiriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\data\\inquiriesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:data\\inquiriesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\controllers\\inquiriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:controllers\\inquiriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\migrations\\inquiriesdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:migrations\\inquiriesdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\models\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:models\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\data\\inquiriesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:data\\inquiriesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\migrations\\20250824192618_createinquiriestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:migrations\\20250824192618_createinquiriestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\migrations\\inquiriesdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|solutionrelative:migrations\\inquiriesdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D0D9F93-D4CC-4EC9-A16C-9CE22988DC6D}|InquiriesManager.API.csproj|c:\\users\\hp\\documents\\github\\inquiriesmanager\\inquiriesmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -65,11 +65,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Inquiry.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Models\\Inquiry.cs",
               "RelativeDocumentMoniker": "Models\\Inquiry.cs",
@@ -78,12 +78,11 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAewAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T20:21:03.763Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "InquiriesDbContext.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Data\\InquiriesDbContext.cs",
               "RelativeDocumentMoniker": "Data\\InquiriesDbContext.cs",
@@ -91,12 +90,11 @@
               "RelativeToolTip": "Data\\InquiriesDbContext.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T22:11:47.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-27T22:11:47.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -108,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MonthlyInquiriesReportRow.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Models\\MonthlyInquiriesReportRow.cs",
               "RelativeDocumentMoniker": "Models\\MonthlyInquiriesReportRow.cs",
@@ -116,38 +114,35 @@
               "RelativeToolTip": "Models\\MonthlyInquiriesReportRow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T17:15:56.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T17:15:56.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "InquiriesRepository.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Data\\InquiriesRepository.cs",
               "RelativeDocumentMoniker": "Data\\InquiriesRepository.cs",
               "ToolTip": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Data\\InquiriesRepository.cs",
               "RelativeToolTip": "Data\\InquiriesRepository.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAuwDMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T10:26:17.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T10:26:17.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "InquiriesController.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Controllers\\InquiriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\InquiriesController.cs",
               "ToolTip": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Controllers\\InquiriesController.cs",
               "RelativeToolTip": "Controllers\\InquiriesController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAuwAkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T09:36:47.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T09:36:47.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "20250824192618_CreateInquiriesTable.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Migrations\\20250824192618_CreateInquiriesTable.cs",
               "RelativeDocumentMoniker": "Migrations\\20250824192618_CreateInquiriesTable.cs",
@@ -159,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "InquiriesDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Migrations\\InquiriesDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\InquiriesDbContextModelSnapshot.cs",
@@ -194,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -202,12 +197,11 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-08-21T20:21:08.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T20:21:08.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -215,12 +209,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T20:21:09.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T20:21:09.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MonthlyInquiriesReport.sql ",
               "DocumentMoniker": "C:\\Users\\hp\\Documents\\GitHub\\InquiriesManager\\InquiriesManager.API\\StoredProcedures\\MonthlyInquiriesReport.sql",
               "RelativeDocumentMoniker": "StoredProcedures\\MonthlyInquiriesReport.sql",
