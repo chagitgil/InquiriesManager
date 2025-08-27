@@ -5,7 +5,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- תחילת החודש הנוכחי + גבולות לטווחים
+    -- צמצום התאריכים עליהם תתבצע השליפה
     DECLARE @curStart  date = DATEFROMPARTS(@ReportYear, @ReportMonth, 1);
     DECLARE @curEnd    date = DATEADD(MONTH, 1, @curStart);
 
@@ -36,6 +36,7 @@ BEGIN
     FROM R
     GROUP BY Department;
 END
+
 GO
 -- שיפור ביצועים
 /*
