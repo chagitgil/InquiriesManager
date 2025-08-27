@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InquiriesManager.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5496b62a5012e12483d3b729813cd9dd0c529cd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58808d0ee47ef6e58c3fb730992afcec669dec9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("InquiriesManager.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InquiriesManager.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
