@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-title>דוח פניות חודשי</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="load()" class="filter-form">
+      <div class="form-inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>שנה</mat-label>
+          <input matInput type="number" [(ngModel)]="year" name="year" required>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+          <mat-label>חודש (1-12)</mat-label>
+          <input matInput type="number" [(ngModel)]="month" name="month" required min="1" max="12">
+        </mat-form-field>
+        
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit">טען דוח</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="table-responsive" *ngIf="rows.length">
+      <table mat-table [dataSource]="rows" class="mat-elevation-z8 full-width">
+        <ng-container matColumnDef="department">
+          <th mat-header-cell *matHeaderCellDef>מחלקה</th>
+          <td mat-cell *matCellDef="let row">{{ row.department }}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="currentMonthCount">
+          <th mat-header-cell *matHeaderCellDef>חודש נוכחי</th>
+          <td mat-cell *matCellDef="let row">{{ row.currentMonthCount }}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="previousMonthCount">
+          <th mat-header-cell *matHeaderCellDef>חודש קודם</th>
+          <td mat-cell *matCellDef="let row">{{ row.previousMonthCount }}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="lastYearSameMonthCount">
+          <th mat-header-cell *matHeaderCellDef>אותו חודש שנה שעברה</th>
+          <td mat-cell *matCellDef="let row">{{ row.lastYearSameMonthCount }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,191 @@
+/* RTL Table Styling */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Beautiful Card Design */
+mat-card {
+    margin: 2rem auto !important;
+    max-width: 1200px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    overflow: hidden !important;
+}
+
+mat-card-title {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 1.5rem 2rem !important;
+    margin: -1rem -1rem 2rem -1rem !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+mat-card-title::before {
+    content: '📋';
+    margin-left: 0.5rem;
+}
+
+mat-card-content {
+    padding: 2rem !important;
+    direction: rtl !important;
+}
+
+/* Table Styling */
+.mat-mdc-table {
+    direction: rtl !important;
+    background: transparent !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+.mat-mdc-header-row {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+.mat-mdc-header-cell {
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    border-bottom: none !important;
+    padding: 1rem !important;
+}
+
+.mat-mdc-row {
+    transition: all 0.3s ease !important;
+}
+
+.mat-mdc-row:hover {
+    background: rgba(102, 126, 234, 0.05) !important;
+    transform: scale(1.01) !important;
+}
+
+.mat-mdc-cell {
+    text-align: center !important;
+    padding: 1rem !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    direction: rtl !important;
+}
+
+.mat-mdc-row:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.empty-state::before {
+    content: '🔍';
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+.loading::before {
+    content: '⏳';
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    mat-card {
+        margin: 1rem !important;
+        border-radius: 15px !important;
+    }
+
+    mat-card-title {
+        font-size: 1.3rem !important;
+        padding: 1rem !important;
+        margin: -1rem -1rem 1.5rem -1rem !important;
+    }
+
+    mat-card-content {
+        padding: 1rem !important;
+    }
+
+    .table-responsive {
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+
+    .mat-mdc-header-cell,
+    .mat-mdc-cell {
+        padding: 0.5rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Hide some columns on mobile */
+    .mat-column-phone,
+    .mat-column-email {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    mat-card-title {
+        font-size: 1.2rem !important;
+    }
+
+    .table-responsive {
+        font-size: 12px;
+    }
+
+    .mat-mdc-header-cell,
+    .mat-mdc-cell {
+        padding: 0.3rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Hide more columns on very small screens */
+    .mat-column-date {
+        display: none !important;
+    }
+}
+.mat-column-actions {
+  width: 80px;
+  text-align: center;
+}
+

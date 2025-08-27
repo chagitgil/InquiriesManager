@@ -1,0 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using InquiriesManager.API.Models;
+
+namespace InquiriesManager.API.Data
+{
+    public class InquiriesDbContext : DbContext
+    {
+        public InquiriesDbContext(DbContextOptions<InquiriesDbContext> options) : base(options) { }
+
+        public DbSet<Inquiry> Inquiries { get; set; }
+    }
+}

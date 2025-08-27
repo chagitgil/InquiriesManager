@@ -1,0 +1,6 @@
+- [x] יצירת פרויקט Angular inquiries-manager-angular
+- [x] התקנת Angular Material
+- [ ] יצירת רכיב טופס פנייה
+- [ ] יצירת רכיב דוח פניות חודשי
+- [ ] התאמה רספונסיבית למובייל
+- [ ] עדכון README.md

@@ -1,0 +1,56 @@
+using InquiriesManager.API.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection; // Ensure this namespace is included for extension methods like UseInMemoryDatabase  
+using Microsoft.EntityFrameworkCore.InMemory; // Add this using directive to resolve 'UseInMemoryDatabase'  
+using Microsoft.EntityFrameworkCore.Sqlite; // Add this for SQLite provider
+using SQLitePCL; // Add this using directive for Batteries.Init()
+
+// ...existing code...
+var builder = WebApplication.CreateBuilder(args);
+
+// Initialize SQLite provider
+Batteries.Init();
+
+// Add services to the container.  
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle  
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Replace in-memory DB with SQLite
+builder.Services.AddDbContext<InquiriesDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<InquiriesRepository>();
+
+// Add CORS policy (example)  
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+// Ensure database is created and migrations are applied
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<InquiriesDbContext>();
+    db.Database.Migrate(); // This will apply any pending migrations
+}
+
+// Configure the HTTP request pipeline.  
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseCors("AllowAll");
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+// Run the following command to update the database schema
+// dotnet ef database update

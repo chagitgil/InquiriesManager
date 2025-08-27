@@ -1,0 +1,60 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using InquiriesManager.API.Models;
+using InquiriesManager.API.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace InquiriesManager.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class InquiriesController : ControllerBase
+    {
+        private readonly InquiriesRepository _repo;
+
+        public InquiriesController(InquiriesRepository repo)
+        {
+            _repo = repo;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Inquiry>>> Get() => Ok(await _repo.GetAllAsync());
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Inquiry>> Get(int id)
+        {
+            var inquiry = await _repo.GetByIdAsync(id);
+            if (inquiry == null) return NotFound();
+            return Ok(inquiry);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] Inquiry inquiry)
+        {
+            await _repo.AddAsync(inquiry);
+            return CreatedAtAction(nameof(Get), new { id = inquiry.Id }, inquiry);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] Inquiry inquiry)
+        {
+            if (id != inquiry.Id) return BadRequest();
+            await _repo.UpdateAsync(inquiry);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            await _repo.DeleteAsync(id);
+            return NoContent();
+        }
+
+        [HttpGet("monthly")]
+        public async Task<List<MonthlyInquiriesReportRow>> GetMonthlyInquiriesReportAsync([FromQuery] int year, [FromQuery] int month)
+        {
+            return await _repo.GetMonthlyInquiriesReportAsync(year, month);
+        }
+
+       
+    }
+}

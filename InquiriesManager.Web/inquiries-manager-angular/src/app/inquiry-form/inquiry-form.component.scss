@@ -1,0 +1,149 @@
+/* RTL Form Styling */
+.inquiry-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  direction: rtl;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Beautiful Card Design */
+mat-card {
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  overflow: hidden !important;
+}
+
+mat-card-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 1.5rem 2rem !important;
+  margin: -1rem -1rem 2rem -1rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+mat-card-title::before {
+  content: '✨';
+  margin-left: 0.5rem;
+}
+
+mat-card-content {
+  padding: 2rem !important;
+}
+
+/* Form Fields */
+.mat-mdc-form-field {
+  direction: rtl !important;
+}
+
+.mat-mdc-form-field .mat-mdc-text-field-wrapper {
+  border-radius: 15px !important;
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-form-field-focus-overlay {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  opacity: 0.1 !important;
+}
+
+/* Button Styling */
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 12px 30px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+}
+
+.mat-mdc-raised-button:disabled {
+  background: #ccc !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+mat-card-actions {
+  padding: 1rem 2rem 2rem !important;
+  text-align: center !important;
+}
+
+/* Error Messages */
+.mat-mdc-form-field-error {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Select Dropdown */
+.mat-mdc-select-panel {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Input Icons */
+.mat-mdc-form-field-icon-prefix,
+.mat-mdc-form-field-icon-suffix {
+  order: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inquiry-form {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  mat-card {
+    margin: 0 !important;
+    border-radius: 15px !important;
+  }
+
+  mat-card-title {
+    font-size: 1.3rem !important;
+    padding: 1rem !important;
+    margin: -1rem -1rem 1.5rem -1rem !important;
+  }
+
+  mat-card-content {
+    padding: 1.5rem !important;
+  }
+
+  .form-group {
+    gap: 1rem;
+  }
+
+  mat-card-actions {
+    padding: 1rem 1.5rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-card-title {
+    font-size: 1.2rem !important;
+  }
+
+  .mat-mdc-raised-button.mat-primary {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="app-container" dir="rtl">
+  <nav class="navbar">
+    <div class="nav-content">
+      <h1 class="nav-title">🏢 מערכת ניהול פניות</h1>
+      <div class="nav-links">
+        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="nav-icon">📝</span>
+          <span>טופס פנייה</span>
+        </a>
+        <a routerLink="/monthly-report" class="nav-link" routerLinkActive="active">
+          <span class="nav-icon">📊</span>
+          <span>דוח פניות</span>
+        </a>
+        <a routerLink="/inquiries-list" class="nav-link" routerLinkActive="active">
+          <span class="nav-icon">📋</span>
+          <span>רשימת פניות</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet />
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 מערכת ניהול פניות - כל הזכויות שמורות</p>
+  </footer>
+</div>

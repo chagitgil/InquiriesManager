@@ -1,0 +1,27 @@
+﻿using Xunit;
+using InquiriesManager.API.Controllers;
+using InquiriesManager.API.Data;
+using InquiriesManager.API.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+public class InquiriesControllerTests
+{
+    //[Fact]
+    public async Task Get_ReturnsAllInquiries()
+    {
+        var repo = new InquiriesRepository(new TestDbContext());
+        var controller = new InquiriesController(repo);
+        var result = await controller.Get();
+        Assert.IsType<OkObjectResult>(result.Result);
+    }
+
+    // Add more tests for Post, Put, Delete as needed
+}
+
+// Dummy context for testing
+public class TestDbContext : InquiriesDbContext
+{
+    public TestDbContext() : base(new Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<InquiriesDbContext>().Options) { }
+}

@@ -1,0 +1,57 @@
+<form [formGroup]="inquiryForm" (ngSubmit)="onSubmit()" class="inquiry-form">
+  <mat-card>
+    <mat-card-title>טופס פנייה</mat-card-title>
+    <mat-card-content>
+      <div class="form-group">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>שם מלא</mat-label>
+          <input matInput formControlName="name" required>
+          @if (inquiryForm.get('name')?.hasError('required')) {
+            <mat-error>יש להזין שם</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>טלפון</mat-label>
+          <input matInput formControlName="phone" required>
+          @if (inquiryForm.get('phone')?.hasError('required')) {
+            <mat-error>יש להזין טלפון</mat-error>
+          }
+          @if (inquiryForm.get('phone')?.hasError('pattern')) {
+            <mat-error>טלפון לא תקין</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>אימייל</mat-label>
+          <input matInput formControlName="email" required>
+          @if (inquiryForm.get('email')?.hasError('required')) {
+            <mat-error>יש להזין אימייל</mat-error>
+          }
+          @if (inquiryForm.get('email')?.hasError('email')) {
+            <mat-error>אימייל לא תקין</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>מחלקה</mat-label>
+          <mat-select formControlName="departmentId" required>
+            @for (dept of departments; track dept) {
+              <mat-option [value]="dept.id">{{ dept.name }}</mat-option>
+            }
+          </mat-select>
+          @if (inquiryForm.get('department')?.hasError('required')) {
+            <mat-error>יש לבחור מחלקה</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>תיאור הפנייה</mat-label>
+          <textarea matInput formControlName="description" rows="3" required></textarea>
+          @if (inquiryForm.get('description')?.hasError('required')) {
+            <mat-error>יש להזין תיאור</mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!inquiryForm.valid">שלח פנייה</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
