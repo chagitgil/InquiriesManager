@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InquiriesService, Inquiry } from '../inquiries.service';
+import { departments } from '../models/departments';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
@@ -22,26 +23,26 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './monthly-report.component.html',
   styleUrl: './monthly-report.component.scss'
 })
+// קומפוננטה לדוח פניות חודשי
 export class MonthlyReportComponent implements OnInit {
+  // עמודות הטבלה
   displayedColumns: string[] = ['department', 'currentMonthCount', 'previousMonthCount', 'lastYearSameMonthCount'];
+  // נתוני הדוח
   rows: any[] = [];
+  // שנה נבחרת
   year: number = new Date().getFullYear();
+  // חודש נבחר
   month: number = new Date().getMonth() + 1;
 
-  // מפה של מחלקות לפי ID
-  departments: { [key: number]: string } = {
-    1: 'משאבי אנוש',
-    2: 'מכירות',
-    3: 'שירות לקוחות',
-    4: 'תמיכה טכנית',
-    5: 'הנהלה'
-  };
 
+  // בנאי הקומפוננטה
   constructor(private inquiriesService: InquiriesService) {}
 
+  // אתחול הקומפוננטה
   ngOnInit() {
   }
 
+  // טוען את נתוני הדוח מהשרת
   load() {
     this.inquiriesService.getMonthlyReport(this.year, this.month).subscribe({
       next: (data) => {
@@ -56,7 +57,8 @@ export class MonthlyReportComponent implements OnInit {
     });
   }
 
+  // מחזיר את שם המחלקה לפי מזהה
   getDepartmentName(departmentId: number): string {
-    return this.departments[departmentId] || 'לא ידוע';
+    return departments[departmentId] || 'לא ידוע';
   }
 }

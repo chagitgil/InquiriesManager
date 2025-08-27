@@ -16,7 +16,6 @@
   width: 100%;
 }
 
-/* Beautiful Card Design */
 mat-card {
   border-radius: 20px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
@@ -38,7 +37,6 @@ mat-card-title {
 }
 
 mat-card-title::before {
-  content: '✨';
   margin-left: 0.5rem;
 }
 

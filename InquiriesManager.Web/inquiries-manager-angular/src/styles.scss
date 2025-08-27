@@ -1,11 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
+// הגדרת משתנה פונט גלובלי
+$main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 html, body { height: 100%; }
 body { 
   margin: 0; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-family: $main-font; 
   direction: rtl;
   text-align: right;
+}
+
+* {
+  font-family: $main-font !important;
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* RTL Support for Angular Material */

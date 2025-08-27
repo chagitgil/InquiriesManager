@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { departments } from '../models/departments';
 import { InquiriesService, Inquiry } from '../inquiries.service';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -22,14 +23,6 @@ export class InquiriesListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'phone', 'email', 'departmentName', 'createdAt', 'description', 'actions'];
   inquiries: Inquiry[] = [];
 
-  // מפה של מחלקות לפי ID
-  departments: { [key: number]: string } = {
-    1: 'משאבי אנוש',
-    2: 'מכירות',
-    3: 'שירות לקוחות',
-    4: 'תמיכה טכנית',
-    5: 'הנהלה'
-  };
 
   constructor(private inquiriesService: InquiriesService) {}
 
@@ -37,6 +30,7 @@ export class InquiriesListComponent implements OnInit {
     this.loadInquiries();
   }
 
+  // טוען את כל הפניות מהשרת
   loadInquiries() {
     this.inquiriesService.getAllInquiries().subscribe({
       next: (data) => {
@@ -51,10 +45,12 @@ export class InquiriesListComponent implements OnInit {
     });
   }
 
+  // מחזיר את שם המחלקה לפי מזהה
   getDepartmentName(departmentId: number): string {
-    return this.departments[departmentId] || 'לא ידוע';
+    return departments[departmentId] || 'לא ידוע';
   }
 
+  // מחיקת פנייה לפי מזהה
   deleteInquiry(id: number) {
     if (confirm('האם אתה בטוח שברצונך למחוק פנייה זו?')) {
       this.inquiriesService.deleteInquiry(id).subscribe({

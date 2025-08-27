@@ -37,7 +37,7 @@
               <mat-option [value]="dept.id">{{ dept.name }}</mat-option>
             }
           </mat-select>
-          @if (inquiryForm.get('department')?.hasError('required')) {
+          @if (inquiryForm.get('departmentId')?.hasError('required')) {
             <mat-error>יש לבחור מחלקה</mat-error>
           }
         </mat-form-field>

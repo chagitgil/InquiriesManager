@@ -21,10 +21,12 @@ export class InquiriesService {
 
   constructor(private http: HttpClient) {}
 
+  // שליחת פנייה חדשה לשרת
   sendInquiry(inquiry: Inquiry): Observable<any> {
     return this.http.post(this.apiUrl, inquiry);
   }
 
+  // קבלת דוח פניות חודשי לפי שנה וחודש
   getMonthlyReport(year: number, month: number): Observable < MonthlyInquiriesReportRow[] > {
       const params = new HttpParams().set('year', year).set('month', month);
       return this.http.get<MonthlyInquiriesReportRow[]>(
@@ -36,10 +38,12 @@ export class InquiriesService {
  
 
 
+  // קבלת כל הפניות מהשרת
   getAllInquiries() {
     return this.http.get<Inquiry[]>(this.apiUrl);
-}
+  }
 
+  // מחיקת פנייה לפי מזהה
   deleteInquiry(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }

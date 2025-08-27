@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { departments } from '../models/departments';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { InquiriesService, Inquiry } from '../inquiries.service';
 import { CommonModule } from '@angular/common';
@@ -22,16 +23,14 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './inquiry-form.component.html',
   styleUrl: './inquiry-form.component.scss'
 })
+// קומפוננטה לטופס פנייה
 export class InquiryFormComponent {
+  // טופס הפנייה
   inquiryForm: FormGroup;
-  departments = [
-    { id: 1, name: 'משאבי אנוש' },
-    { id: 2, name: 'מכירות' },
-    { id: 3, name: 'שירות לקוחות' },
-    { id: 4, name: 'תמיכה טכנית' },
-    { id: 5, name: 'הנהלה' }
-  ];
+  // מערך המחלקות לבחירה בטופס
+  departments = Object.entries(departments).map(([id, name]) => ({ id: Number(id), name }));
 
+  // בנאי הקומפוננטה, יוצר את הטופס
   constructor(private fb: FormBuilder, private inquiriesService: InquiriesService) {
     this.inquiryForm = this.fb.group({
       name: ['', Validators.required],
@@ -42,6 +41,7 @@ export class InquiryFormComponent {
     });
   }
 
+  // שליחת הטופס לשרת
   onSubmit() {
     if (this.inquiryForm.valid) {
       const inquiry: Inquiry = this.inquiryForm.value;

@@ -1,4 +1,15 @@
-/* RTL Table Styling */
+.delete-btn {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+    padding: 6px !important;
+}
+
+.delete-btn mat-icon {
+    color: #222 !important;
+    font-size: 24px !important;
+}
+
 .table-responsive {
     overflow-x: auto;
     margin-top: 2rem;
@@ -11,7 +22,6 @@
     width: 100%;
 }
 
-/* Beautiful Card Design */
 mat-card {
     margin: 2rem auto !important;
     max-width: 1200px !important;

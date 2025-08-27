@@ -1,7 +1,7 @@
 <div class="app-container" dir="rtl">
   <nav class="navbar">
     <div class="nav-content">
-      <h1 class="nav-title">🏢 מערכת ניהול פניות</h1>
+      <h1 class="nav-title">מערכת ניהול פניות</h1>
       <div class="nav-links">
         <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <span class="nav-icon">📝</span>
@@ -9,7 +9,7 @@
         </a>
         <a routerLink="/monthly-report" class="nav-link" routerLinkActive="active">
           <span class="nav-icon">📊</span>
-          <span>דוח פניות</span>
+          <span>דוח פניות חודשי</span>
         </a>
         <a routerLink="/inquiries-list" class="nav-link" routerLinkActive="active">
           <span class="nav-icon">📋</span>
@@ -22,8 +22,4 @@
   <main class="main-content">
     <router-outlet />
   </main>
-
-  <footer class="footer">
-    <p>&copy; 2025 מערכת ניהול פניות - כל הזכויות שמורות</p>
-  </footer>
 </div>
