@@ -1,11 +1,11 @@
-﻿CREATE PROCEDURE dbo.MonthlyInquiriesReport
+CREATE PROCEDURE dbo.MonthlyInquiriesReport
     @ReportYear  int,
     @ReportMonth int
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- צמצום התאריכים עליהם תתבצע השליפה
+     -- צמצום התאריכים עליהם תתבצע השליפה
     DECLARE @curStart  date = DATEFROMPARTS(@ReportYear, @ReportMonth, 1);
     DECLARE @curEnd    date = DATEADD(MONTH, 1, @curStart);
 
@@ -16,31 +16,30 @@ BEGIN
     DECLARE @lastEnd   date = DATEADD(MONTH, 1, @lastStart);
 
     ;WITH R AS (
-        SELECT Department, 'CUR' AS B
+        SELECT DepartmentId, 'CUR' AS B
         FROM dbo.Inquiries
         WHERE CreatedAt >= @curStart AND CreatedAt < @curEnd
         UNION ALL
-        SELECT Department, 'PREV'
+        SELECT DepartmentId, 'PREV'
         FROM dbo.Inquiries
         WHERE CreatedAt >= @prevStart AND CreatedAt < @prevEnd
         UNION ALL
-        SELECT Department, 'LAST'
+        SELECT DepartmentId, 'LAST'
         FROM dbo.Inquiries
         WHERE CreatedAt >= @lastStart AND CreatedAt < @lastEnd
     )
     SELECT
-        Department,
+        DepartmentId,
         SUM(CASE WHEN B='CUR'  THEN 1 ELSE 0 END) AS CurrentMonthCount,
         SUM(CASE WHEN B='PREV' THEN 1 ELSE 0 END) AS PreviousMonthCount,
         SUM(CASE WHEN B='LAST' THEN 1 ELSE 0 END) AS LastYearSameMonthCount
     FROM R
-    GROUP BY Department;
+    GROUP BY DepartmentId;
 END
-
 GO
 -- שיפור ביצועים
 /*
-הוספת אינדקסים על CreatedAt ו Department
+הוספת אינדקסים על CreatedAt ו DepartmentId
 בטבלאות ענקיות הוספת Partition
 
 
